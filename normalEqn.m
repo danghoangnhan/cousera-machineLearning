@@ -13,6 +13,14 @@ theta = zeros(size(X, 2), 1);
 % ---------------------- Sample Solution ----------------------
 
 
+% Compute the matrix multiplication of X' and X
+XTX = X' * X;
+
+% Compute the inverse of XTX
+XTX_inv = pinv(XTX); % pinv is used instead of inv for numerical stability
+
+% Compute the optimal values of theta
+theta = XTX_inv * X' * y;
 
 
 % -------------------------------------------------------------

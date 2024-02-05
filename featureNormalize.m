@@ -25,7 +25,12 @@ sigma = zeros(1, size(X, 2));
 %
 % Hint: You might find the 'mean' and 'std' functions useful.
 %       
-
+% Compute the mean of each feature
+mu = mean(X);
+% Compute the standard deviation of each feature
+sigma = std(X);
+% Normalize each feature
+X_norm = (X - mu) ./ sigma;
 
 
 

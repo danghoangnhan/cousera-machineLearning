@@ -16,13 +16,12 @@ for iter = 1:num_iters
     % Hint: While debugging, it can be useful to print out the values
     %       of the cost function (computeCost) and gradient here.
     %
-
-
-
-
-
-
-
+    % Compute the predictions
+    predictions = X * theta;
+    % Compute the errors
+    errors = predictions - y;
+    % Update theta, note the use of element-wise multiplication with the errors
+    theta = theta - (alpha / m) * (X' * errors);
     % ============================================================
 
     % Save the cost J in every iteration    
